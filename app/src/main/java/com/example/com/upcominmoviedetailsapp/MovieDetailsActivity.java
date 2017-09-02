@@ -37,7 +37,7 @@ import java.util.List;
 public class MovieDetailsActivity extends AppCompatActivity  implements ViewPager.OnPageChangeListener, View.OnClickListener{
 
     LinearLayout pager_indicator;
-    TextView title,overview;
+    TextView title,overview,developedby;
     RatingBar rating;
     private int dotsCount;
     private ImageView[] dots;
@@ -54,6 +54,8 @@ public class MovieDetailsActivity extends AppCompatActivity  implements ViewPage
         ArrayList<String> list = new ArrayList();
         title = (TextView) findViewById(R.id.movietitlename);
         overview = (TextView) findViewById(R.id.overview);
+        developedby = (TextView) findViewById(R.id.developedby);
+        developedby.setOnClickListener(this);
         rating = (RatingBar) findViewById(R.id.rating);
         getimagerequest();
     }
@@ -164,6 +166,7 @@ public class MovieDetailsActivity extends AppCompatActivity  implements ViewPage
 
     @Override
     public void onClick(View v) {
+        startActivity(new Intent(MovieDetailsActivity.this,DeveloperInfo.class));
     }
 
     @Override

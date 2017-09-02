@@ -78,8 +78,6 @@ public class MainActivity extends AppCompatActivity  {
                      movielistview.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
                      movielistview.setAdapter(adapterBoxoffice);
 
-
-
                      adapterBoxoffice.setOnItemClickListener(new AdapterBoxoffice.MyClickListener() {
                          @Override
                          public void onItemClick(int position, View v) {
